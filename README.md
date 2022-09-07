@@ -8,9 +8,6 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ## Flix Part 1
 
-### User Stories
-`TODO://` In the **User Stories section below**, add an `x` in the `-[ ]` like this `- [x]` for any user story you complete. (🚫 Remove this paragraph after checking off completed user stories)
-
 #### REQUIRED (10pts)
 - [x] (2pts) User sees an app icon on the home screen and a styled launch screen.
 - [x] (5pts) User can view and scroll through a list of movies now playing in theaters.
@@ -27,3 +24,6 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 
 ### Notes
 Describe any challenges encountered while building the app.
+A only problem I face building this app was a strange error that stated:
+error: Thread 1: "-[UITableViewCellContentView setText:]: unrecognized selector sent to instance 0x12ac11c60"
+After carefully looking over my work I was able to detect that there was a problem in the way I connected my labels, and my UIViewImage Icon. After I figured that the rest of the project went very smoothly!
