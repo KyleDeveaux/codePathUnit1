@@ -7,6 +7,9 @@
 
 import UIKit
 import AlamofireImage
+
+
+
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
@@ -37,7 +40,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                  self.movies = dataDictionary["results"] as! [[String:Any]]
                  //this is used to reload the data so we do not get stuck on a white screen
                     self.tableView.reloadData()
-                 print(dataDictionary)
+                 
 
                     // TODO: Get the array of movies
                     // TODO: Store the movies in a property to use elsewhere
@@ -56,6 +59,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let movie = movies[indexPath.row]
         let title = movie["title"] as! String
         let synopsis = movie["overview"] as! String
+        
         cell.titleLabel.text = title
         cell.synopsisLabel.text = synopsis
         
@@ -65,7 +69,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         cell.posterView.af_setImage(withURL: posterUrl)
         return cell
     }
+    override func prepare(for segue:UIStoryboardSegue, sender: Any?){
+        //Get the new view controller using segue.destination
 
+        //Pass the selected object to the new view controller
+        print("Loading the details screen")
+        
+        //Find the selected Movie
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)!
+        
+        let movie = movies[indexPath.row]
+        
+        //Pass the selected movie to the details view controller
+        let detailViewController =
+        segue.destination as!
+        MovieDetailViewController
+        detailViewController.movie = movie
+        
+        
+    //Deselect the chosen movie
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
 }
 
