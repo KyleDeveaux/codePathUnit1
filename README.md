@@ -17,7 +17,7 @@ Kyle Deveaux - Unit1 FlixApp
 #### BONUS
 - [ ] (2pts) User can tap a poster in the collection view to see a detail screen of that movie.
 - [ ] (2pts) In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer.
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/81199017/188769862-673b00ad-15d1-4fbc-ba04-2d727e57725e.gif)
+
 
 
 ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/81199017/190042874-98d15526-e9d4-41aa-b5e6-ca254534c422.gif)
